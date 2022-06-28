@@ -1,0 +1,204 @@
+@font-face {
+    font-family: "TT Lakes";
+    src: url(../font/TTLakes-Regular.woff) format("woff"), 
+         url(../font/TTLakes-Regular.ttf) format("truetype"),
+         url(../font/TTLakes-Regular.eot) format("embedded-opentype");
+    font-weight: 500;
+    font-style: normal; }
+  
+  @font-face {
+    font-family: "TT Lakes";
+    src: url(../font/TTLakes-Medium.woff) format("woff"),
+         url(../font/TTLakes-Medium.ttf) format("truetype"), 
+         url(../font/TTLakes-Medium.eot) format("embedded-opentype");
+    font-weight: 700;
+    font-style: normal; }
+  
+  @font-face {
+    font-family: "TT Lakes";
+    src: url(../font/TTLakes-Bold.woff) format("woff"), 
+         url(../font/TTLakes-Bold.ttf) format("truetype"), 
+         url(../font/TTLakes-Bold.eot) format("embedded-opentype");
+    font-weight: 900;
+    font-style: normal; }
+  
+  *, *::before, *::after {
+    box-sizing: inherit; }
+  
+  html {
+    box-sizing: border-box;
+    scroll-behavior: smooth; }
+  
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: "TT Lakes", "Verdana", sans-serif;
+    color: #000; }
+  
+/*-------------------------------------------Шапка-------------------------------------------------------------------------------*/
+  
+.leftside-menu {
+    position: fixed;
+    top: 0;
+    left: 0px;
+    display: flex;
+    flex-direction: column;
+    width: 320px;
+    height: 100%;
+    padding-bottom: 32px;
+    color: white;
+    box-shadow:  16px 0px 52px rgba(14, 24, 80, 0.2), -2px 0px 4px rgba(69, 79, 126, 0.02);
+    width: 320px;
+    overflow-y: auto;
+}
+.leftside-menu__header {
+    display: flex;
+    align-items: center;
+    padding: 16px;
+}
+.main-btn {
+  display: block;
+  font-size: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: 500ms;
+}
+.main-btn:hover::after {
+  background-color: #ff8bae; }
+.main-btn::after {
+  content: '';
+  display: block;
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  background-color: #FF3E79;
+  background-repeat: no-repeat;
+  background-position: center center;
+  border-radius: 50%; }
+.main-btn--type_close {
+    margin-right: 16px;
+    
+}
+.main-btn:hover{
+  opacity: 75%;
+}
+.main-btn--type_close::after{
+  background-image: url(../img/close.svg);
+}
+.leftside-menu__close {
+    margin-right: 16px; 
+}
+.logo {
+  min-width: 70px;
+}
+.leftside-menu__logo {
+  margin-right: auto; 
+}
+.main-btn--type-search::after {
+  background-image: url(../img/search.svg);
+}
+
+/*-------------------------------------------Пункты меню-------------------------------------------------------------------------------*/
+  
+.leftside-menu-nav {
+  padding: 0;
+  list-style: none;
+  margin-bottom: auto;
+}
+.leftside-menu-nav__item {
+  margin-bottom: 16px;
+}
+.liftside-menu-nav__link {
+  display: block;
+  padding-left: 10px;
+  font-family: "TT Lakes", "Verdana", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+  text-decoration: none;
+  color: #000;
+  border: 4px solid transparent;
+}
+.liftside-menu-nav__link:hover{
+  color: #7E7E82;
+  border-left-color: #41F6D7;
+}
+
+/*-------------------------------------------Кнопки обратной связи-------------------------------------------------------------------------------*/
+
+.leftside-menu-contact {
+  padding-left: 16px;
+  margin-top: 32px;
+}
+.connect-btns {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  padding-top: 16px;
+  margin-top: 0;
+  margin-bottom: 0;
+  list-style: none;
+}
+.connect-btn__item {
+  margin-right: 16px;
+  margin-bottom: 16px;
+}
+.main-btn--type_call::after {
+  background-image: url(../img/call.svg);
+}
+.main-btn--type_email::after {
+  background-image: url(../img/chat.svg);
+}
+.main-btn--type_profile::after {
+  background-image: url(../img/profile.svg);
+}
+.leftside-menu__number {
+  display: block;
+  margin-top: 0;
+  margin-bottom: 8px;
+  font-family: "TT Lakes", "Verdana", sans-serif;
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: -0.6px;
+  text-decoration: none;
+  color: #000; 
+}
+.leftside-menu__email {
+  display: block;
+  margin-top: 0;
+  margin-bottom: 12px;
+  font-family: "TT Lakes", "Verdana", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+  text-decoration: none;
+  color: #000;   
+}
+
+/*-------------------------------------------Выбор языка-------------------------------------------------------------------------------*/
+
+.lang {
+  display: flex;
+  padding-left: 16px;
+  margin: 0;
+  list-style: none;
+}
+.lang__item {
+  margin-right: 7px;
+}
+.lang__link {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+  text-decoration: none;
+  color: #000;
+}
+.lang__link:hover{
+  color:#7E7E82;
+}
